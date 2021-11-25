@@ -1,7 +1,6 @@
 import '../styles/globals.css'
 import { GlobalStyle } from '../public/styles/GlobalStyle'
 import { useApollo } from '../apollo/apolloClient'
-// import { LayoutC as Layout } from '../container/Layout'
 import Context from '../context'
 import '../public/styles/App.css'
 import { ApolloProvider } from '@apollo/client'
@@ -16,9 +15,7 @@ export default function App({ Component, pageProps }) {
     <Context>
       <ApolloProvider client={apolloClient}>
         <GlobalStyle />
-        {/* <Layout> */}
         <Component {...pageProps} />
-        {/* </Layout> */}
       </ApolloProvider>
     </Context>
   )

@@ -1,20 +1,10 @@
-const { ADMIN_URL } = process.env
-
 module.exports = {
-    async rewrites() {
-        return [
-            {
-                source: '/:path*',
-                destination: '/:path*',
-            },
-            {
-                source: '/admin',
-                destination: `${ ADMIN_URL }/admin`,
-            },
-            {
-                source: '/admin/:path*',
-                destination: `${ ADMIN_URL }/admin/:path*`,
-            },
-        ]
-    },
+  future: {
+    webpack5: true // by default, if you customize webpack config, they switch back to version 4. 
+    // Looks like backward compatibility approach.
+  },
+  webpack(config) {
+    config.resolve.fallback = { fs: false }
+    return config
+  }
 }

@@ -9,14 +9,14 @@ import Image from 'next/image'
 export const IndexC = () => {
   return (
     <Container>
-       <Image
+       {/* <Image
         src="/admin/images/company-finance.jpg"
         alt="Picture of the author"
         width={1000}
         layout='responsive'
         height={500}
         objectFit={'cover'}
-      />
+      /> */}
       <OnBanner height='80px' />
       <Hero />
       <HeroCard />

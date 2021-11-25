@@ -1,30 +1,16 @@
-/* eslint-disable no-case-declarations */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/jsx-no-undef */
 import { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { ApolloClient, ApolloLink, from, HttpLink, InMemoryCache, ApolloProvider, fromPromise, gql, makeVar } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
 import { createUploadLink } from 'apollo-upload-client'
 import merge from 'deepmerge'
-import { onError } from '@apollo/client/link/error'
 import isEqual from 'lodash/isEqual'
 import jwt, { decode } from 'jsonwebtoken'
-import FingerprintJS from '@fingerprintjs/fingerprintjs'
 import fetchJson from '../pages/api/lib/hooks/fetchJson'
 import { URL_BASE } from './urls'
-import { concatPagination } from '@apollo/client/utilities'
 
 export const isProduct = makeVar([])
 
-// busca el id del dispositivo
-const getDeviceId = async () => {
-  const fp = await FingerprintJS.load()
-  const result = await fp.get()
-  // return result.visitorId
-  console.log(result.visitorId)
-}
 const now = Date.now().valueOf() / 1000
 export function getTokenState (token) {
   if (!token) {

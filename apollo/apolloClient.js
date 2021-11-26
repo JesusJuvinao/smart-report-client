@@ -1,12 +1,8 @@
 import { useMemo } from 'react'
-import PropTypes from 'prop-types'
-import { ApolloClient, ApolloLink, from, HttpLink, InMemoryCache, ApolloProvider, fromPromise, gql, makeVar } from '@apollo/client'
+import { ApolloClient, from, HttpLink, InMemoryCache } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
-import { createUploadLink } from 'apollo-upload-client'
 import merge from 'deepmerge'
 import isEqual from 'lodash/isEqual'
-import jwt, { decode } from 'jsonwebtoken'
-import fetchJson from '../pages/api/lib/hooks/fetchJson'
 import { URL_BASE } from './urls'
 import { concatPagination } from '@apollo/client/utilities'
 

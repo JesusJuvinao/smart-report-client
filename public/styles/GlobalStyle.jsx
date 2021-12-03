@@ -174,7 +174,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-appearance: none;
     }
 
-    ::-webkit-file-Upload-button {
+    ::-webkit-file-upload-button {
         -webkit-appearance: button;
         font: inherit;
     }

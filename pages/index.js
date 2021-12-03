@@ -1,3 +1,4 @@
 export default function Home() {
-  return ( <div>Online Stuart</div> )
+  console.log('Jejejeje')
+  return ( <div /> )
 }

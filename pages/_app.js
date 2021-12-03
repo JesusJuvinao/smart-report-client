@@ -1,15 +1,17 @@
 import '../styles/globals.css'
 import { GlobalStyle } from '../public/styles/GlobalStyle'
-import { useApollo } from '../apollo/apolloClient'
 import Context from '../context'
 import '../public/styles/App.css'
-import { ApolloProvider } from '@apollo/client'
+import { createHttpLink, ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 export default function App({ Component, pageProps }) {
-  const apolloClient = useApollo(pageProps)
-
+  const client = new ApolloClient({
+    cache: new InMemoryCache(),
+    link: createHttpLink({ uri: "/api/graphql" }),
+  });
+  
   return (
     <Context>
-      <ApolloProvider client={apolloClient}>
+      <ApolloProvider client={client}>
         <GlobalStyle />
         <Component {...pageProps} />
       </ApolloProvider>

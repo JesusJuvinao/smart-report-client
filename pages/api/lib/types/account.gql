@@ -19,7 +19,7 @@ enum typeAccount {
 }
 # Query
 type Query {
-  getAllAccount(idComp: ID): [AccountType]
+  hello: String
 }
 
 # Mutations

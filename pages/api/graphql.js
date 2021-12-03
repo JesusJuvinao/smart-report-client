@@ -1,5 +1,20 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+const { ApolloServer, gql } = require('apollo-server-micro');
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'Hii mundo' })
-}
+const typeDefs = gql`
+  type Query {
+    sayHello: String
+  }
+`;
+
+const resolvers = {
+  Query: {
+    sayHello(parent, args, context) {
+      return 'Hello World!';
+    },
+  },
+};
+
+const apolloServer = new ApolloServer({ typeDefs, resolvers });
+module.exports = apolloServer.start().then(() => {
+  return apolloServer.createHandler({ path: '/data' });
+});

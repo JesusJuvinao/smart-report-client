@@ -5,7 +5,7 @@ export default {
     Query: {
     ...accountResolver.QUERIES,
     },
-    Mutations: {
+    Mutation: {
     ...accountResolver.MUTATIONS,
     }
 }

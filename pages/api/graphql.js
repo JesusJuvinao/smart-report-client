@@ -1,3 +1,4 @@
+import connectDb from './lib/db'
 const { ApolloServer, gql } = require('apollo-server-micro');
 
 const typeDefs = gql`
@@ -5,7 +6,7 @@ const typeDefs = gql`
     sayHello: String
   }
 `;
-
+connectDb()
 const resolvers = {
   Query: {
     sayHello(parent, args, context) {
@@ -16,5 +17,5 @@ const resolvers = {
 
 const apolloServer = new ApolloServer({ typeDefs, resolvers });
 module.exports = apolloServer.start().then(() => {
-  return apolloServer.createHandler({ path: '/data' });
+  return apolloServer.createHandler({ path: '/api/graphql' });
 });

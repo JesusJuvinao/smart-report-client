@@ -6,5 +6,9 @@ export default function Home() {
 }`;
   const { loading, error, data } = useQuery(GET_BEASTS);
   console.log(loading, error, data)
-  return ( <div /> )
+  return (
+     <div>
+       sdñfjsdñlfsñllHolaaaaaaaaaa
+     </div>
+     )
 }

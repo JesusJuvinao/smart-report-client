@@ -1,15 +1,10 @@
 version: "3.3"
 
 services:
-  nextjs:
-  container_name: nextjs
-    ports:
-      - 3000:3000
+  ec_frontend:
     build:
       dockerfile: Dockerfile
+    ports:
+      - 3000:3000
     volumes:
-      - /usr/src/app
-      - /usr/src/app/node_modules
-      - /usr/src/app/.next
-nginx:
-  build: ./nginx
+      - .:/ec_frontend

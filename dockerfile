@@ -39,5 +39,4 @@ ENV PORT 3000
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry.
 # ENV NEXT_TELEMETRY_DISABLED 1
-
-CMD ["node_modules/.bin/next", "start"]
+CMD [ "pm2-runtime", "start", "npm", "--" ]

@@ -17,4 +17,4 @@ COPY . /ec_frontend
 RUN npm run build
 
 # Launch app with PM2
-CMD [ "npm", "start",]
+CMD [ "npm", "start"]

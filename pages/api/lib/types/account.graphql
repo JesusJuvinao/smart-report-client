@@ -10,7 +10,7 @@ input IAccount {
     idUser: ID
 }
 type Query {
-  sayHello: String
+ sayHello: String
 }
 
 # Mutations

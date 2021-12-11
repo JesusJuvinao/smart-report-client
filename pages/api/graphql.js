@@ -1,9 +1,9 @@
 import connectDb from './lib/db'
-import typeDefs from '../api/lib/typeDefs'
-import resolvers from '../api/lib/resolvers/index'
+// import typeDefs from '../api/lib/typeDefs'
+// import resolvers from '../api/lib/resolvers/index'
 import Cors from 'micro-cors'
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
-import { ApolloServer } from 'apollo-server-micro'
+import { ApolloServer, gql  } from 'apollo-server-micro'
 connectDb()
 export const config = {
   api: {
@@ -12,6 +12,21 @@ export const config = {
 };
 
 const cors = Cors();
+
+const typeDefs = gql`
+  type Query {
+    sayHello: String
+  }
+`;
+
+const resolvers = {
+  Query: {
+    sayHello(parent, args, context) {
+      return 'Hello World!';
+    },
+  },
+};
+
 
 const server = new ApolloServer({
   resolvers,

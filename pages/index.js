@@ -8,7 +8,7 @@ export default function Home() {
   console.log(loading, error, data)
   return (
      <div>
-       sdñfjsdñlfsñllHolaaaaaaaaaa
+       Hagamos algo chido hoy
      </div>
      )
 }

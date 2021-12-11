@@ -16,6 +16,10 @@ COPY . /next-app
 
 # Build app
 RUN npm run build
+ENV NODE_ENV production
+
+# Build app
+RUN npm run build
 
 # Launch app with PM2
-CMD [ "pm2-runtime", "start", "npm"]
+CMD [ "pm2-runtime", "start", "npm", "--" ]

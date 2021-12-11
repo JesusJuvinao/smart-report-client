@@ -22,4 +22,4 @@ ENV NODE_ENV production
 RUN npm run build
 
 # Launch app with PM2
-CMD [ "pm2-runtime", "start", "npm", "--" ]
+CMD [ "pm2", "start", "npm", "--" ]

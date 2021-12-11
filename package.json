@@ -28,6 +28,7 @@
     "i": "^0.3.7",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
+    "micro": "^9.3.4",
     "micro-cors": "^0.1.1",
     "minio": "^7.0.22",
     "moment": "^2.29.1",

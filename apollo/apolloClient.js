@@ -33,15 +33,7 @@ function createApolloClient() {
             authLink,
             httpLink
         ]),
-        cache: new InMemoryCache({
-            typePolicies: {
-                Query: {
-                    fields: {
-                        allPosts: concatPagination()
-                    }
-                }
-            }
-        })
+        cache: new InMemoryCache({})
     })
 }
 

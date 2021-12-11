@@ -5,20 +5,12 @@ type AccountType {
     idUser: ID
 }
 # Account Type
-
-# Account Input
 input IAccount {
     _id: ID
     idUser: ID
 }
-enum typeAccount {
-  ASSETS,
-  EXPENSE,
-  LIABILITY,
-  INCOME,
-}
 type Query {
-  HelloWord: String
+  sayHello: String
 }
 
 # Mutations

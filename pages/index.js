@@ -6,9 +6,10 @@ export default function Home() {
 }`;
   const { loading, error, data } = useQuery(GET_BEASTS);
   console.log(loading, error, data)
+  if (loading) return <div>LOADING</div>
   return (
      <div> 
-       Hagamos xxxxx algo chido hoy
+      {data?.sayHello}
      </div>
      )
 }

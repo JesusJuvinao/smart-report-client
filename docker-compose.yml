@@ -9,5 +9,3 @@ services:
       - 3000:3000
     volumes:
       - .:/next-app
-  nginx:
-    build: ./nginx

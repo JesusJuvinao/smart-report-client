@@ -17,7 +17,8 @@ const typeDefs = gql`
   type Query {
     sayHello: String
   }
-`;
+`
+
 
 const resolvers = {
   Query: {

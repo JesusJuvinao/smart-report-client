@@ -1,9 +1,9 @@
 'use strict'
-export const hello = async (_, { idComp }, ctx) => {
+export const HelloWord = async (_, { idComp }, ctx) => {
   return 'Hello world! HOLA STUART YA HAGO CONSULTAS  EN GQL ';
 }
 export default {
   QUERIES: {
-    hello
+    HelloWord
   }
 }

@@ -18,7 +18,7 @@ enum typeAccount {
   INCOME,
 }
 type Query {
-  hello: String
+  HelloWord: String
 }
 
 # Mutations

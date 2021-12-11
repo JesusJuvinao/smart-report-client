@@ -1,17 +1,17 @@
 # Production image, copy all the files and run next
 FROM node:14
-RUN mkdir /ec_frontend
+RUN mkdir /next-app
 # Set working directory
-WORKDIR /ec_frontend
+WORKDIR /next-app
 
 # Utilise Docker cache to save re-installing dependencies if unchanged
-COPY ./package.json  /ec_frontend
+COPY ./package.json  /next-app
 
 # Install dependencies
 RUN npm install
 
 # Copy all files
-COPY . /ec_frontend  
+COPY . /next-app  
 
 # Build app
 RUN npm run build

@@ -1,5 +1,5 @@
 # Production image, copy all the files and run next
-FROM node:14
+FROM node:14.17-alpine
 RUN mkdir /next-app
 # Set working directory
 WORKDIR /next-app
@@ -15,6 +15,8 @@ COPY . /next-app
 
 # Build app
 RUN npm run build
+
+USER node
 
 # Launch app with PM2
 CMD [ "npm", "start"]

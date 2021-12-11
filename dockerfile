@@ -1,5 +1,5 @@
 # Production image, copy all the files and run next
-FROM node:14
+FROM node:14.17-alpine
 RUN mkdir /next-app
 # Set working directory
 WORKDIR /next-app

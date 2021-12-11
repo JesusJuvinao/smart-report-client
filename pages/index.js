@@ -7,8 +7,8 @@ export default function Home() {
   const { loading, error, data } = useQuery(GET_BEASTS);
   console.log(loading, error, data)
   return (
-     <div>
-       Hagamos algo chido hoy
+     <div> 
+       Hagamos xxxxx algo chido hoy
      </div>
      )
 }
